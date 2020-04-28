@@ -23,9 +23,6 @@ app.use(
   })
 );
 // app.use("/notes", notesRoute);
-const PORT = 5000;
-
-app.listen(PORT, () => console.log(`server is listening on PORT: ${PORT}`));
 
 // a middleware with no mount path; gets executed for every request to the app
 app.use(function (req, res, next) {
@@ -38,3 +35,7 @@ app.use("/tasks/", tasksRoute);
 
 //setup the notes middleware
 app.use("/users/", usersRoute);
+
+const PORT = 5000;
+
+app.listen(PORT, () => console.log(`server is listening on PORT: ${PORT}`));

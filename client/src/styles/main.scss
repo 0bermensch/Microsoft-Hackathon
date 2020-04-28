@@ -1,6 +1,11 @@
+@import "./partials/colors";
+@import "./partials/fonts";
 @import "./partials/breakpoints";
 @import "./partials/flex-mixins";
 @import "./partials/taskForm";
+@import "./partials/header";
+@import "./partials/home";
+
 *,
 html,
 body {
