@@ -1,12 +1,137 @@
 .main {
   display: flex;
+  height: 768px;
   &_left {
     width: 68px;
+    &-nav {
+      width: 68px;
+      object-fit: contain;
+    }
   }
   &_middle {
     width: 320px;
-    height: 768px;
-    background-color: #555555;
+    background-color: $white;
+    &-schedule {
+      width: 77px;
+      height: 24px;
+      font-family: Segoeui;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $sched;
+      margin: 18px 20px;
+    }
+    &-container {
+      border-top: 1px solid $calendar-border;
+      display: flex;
+      height: 708px;
+      background-image: url("../assets/images/calendar-bg.png");
+      .left {
+        padding-top: 40px;
+        width: 61px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        &_hour {
+          width: 15px;
+          height: 19px;
+        }
+      }
+      .right {
+        width: 16vw;
+        position: relative;
+        &_cal {
+          display: flex;
+          align-items: center;
+          &-date {
+            width: 61px;
+            height: 27px;
+            font-family: Segoeui;
+            font-size: 20px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $calendar-date;
+            margin: 9px;
+          }
+          &-day {
+            margin-top: 8px;
+            font-family: Segoeui;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $calendar-time;
+          }
+          &-purple {
+            width: 230px;
+            height: 30px;
+            border-radius: 2px;
+            background-color: $calendar-standup;
+            display: flex;
+            align-items: center;
+            &.morning {
+              position: absolute;
+              top: 78px;
+            }
+            &.afternoon {
+              position: absolute;
+              top: 318px;
+            }
+            &.end {
+              position: absolute;
+              top: 648px;
+            }
+            &-innertext {
+              margin-left: 10px;
+              height: 16px;
+              font-family: Segoeui;
+              font-size: 12px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: $calendar-standup-text;
+            }
+          }
+          &-blue {
+            width: 230px;
+            height: 210px;
+            border-radius: 2px;
+            background-color: $calendar-worktime;
+            &.morning {
+              position: absolute;
+              top: 108px;
+            }
+            &.afternoon {
+              position: absolute;
+              top: 438px;
+            }
+            &-innertext {
+              margin: 6px 10px;
+              height: 16px;
+              font-family: Segoeui;
+              font-size: 12px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: $calendar-worktime-text;
+            }
+          }
+        }
+      }
+    }
   }
   &_right {
     background-color: blue;

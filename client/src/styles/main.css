@@ -78,16 +78,179 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 768px;
 }
 
 .main_left {
   width: 68px;
 }
 
+.main_left-nav {
+  width: 68px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .main_middle {
   width: 320px;
-  height: 768px;
-  background-color: #555555;
+  background-color: #ffffff;
+}
+
+.main_middle-schedule {
+  width: 77px;
+  height: 24px;
+  font-family: Segoeui;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #252423;
+  margin: 18px 20px;
+}
+
+.main_middle-container {
+  border-top: 1px solid #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 708px;
+  background-image: url("../assets/images/calendar-bg.png");
+}
+
+.main_middle-container .left {
+  padding-top: 40px;
+  width: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main_middle-container .left_hour {
+  width: 15px;
+  height: 19px;
+}
+
+.main_middle-container .right {
+  width: 16vw;
+  position: relative;
+}
+
+.main_middle-container .right_cal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_middle-container .right_cal-date {
+  width: 61px;
+  height: 27px;
+  font-family: Segoeui;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6264a5;
+  margin: 9px;
+}
+
+.main_middle-container .right_cal-day {
+  margin-top: 8px;
+  font-family: Segoeui;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #605e5c;
+}
+
+.main_middle-container .right_cal-purple {
+  width: 230px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #ddd3ea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_middle-container .right_cal-purple.morning {
+  position: absolute;
+  top: 78px;
+}
+
+.main_middle-container .right_cal-purple.afternoon {
+  position: absolute;
+  top: 318px;
+}
+
+.main_middle-container .right_cal-purple.end {
+  position: absolute;
+  top: 648px;
+}
+
+.main_middle-container .right_cal-purple-innertext {
+  margin-left: 10px;
+  height: 16px;
+  font-family: Segoeui;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #583b7e;
+}
+
+.main_middle-container .right_cal-blue {
+  width: 230px;
+  height: 210px;
+  border-radius: 2px;
+  background-color: #c2dff4;
+}
+
+.main_middle-container .right_cal-blue.morning {
+  position: absolute;
+  top: 108px;
+}
+
+.main_middle-container .right_cal-blue.afternoon {
+  position: absolute;
+  top: 438px;
+}
+
+.main_middle-container .right_cal-blue-innertext {
+  margin: 6px 10px;
+  height: 16px;
+  font-family: Segoeui;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #06487a;
 }
 
 .main_right {
