@@ -68,6 +68,10 @@ router.put("/:id", (req, res) => {
   if (found) {
     users.forEach((user) => {
       if (user.id === req.params.id) {
+        //set this up for the future? idk if we are doing favorites
+        //also not sure if this works lol
+        user.favorites = user.favorites.push(req.body.favorites);
+
         user.title = req.body.title ? req.body.title : user.title;
         user.description = req.body.description
           ? req.body.description

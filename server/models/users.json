@@ -1,5 +1,10 @@
 [
-  { "id": "1234314332", "username": "Connor Steele" },
+  {
+    "id": "1234314332",
+    "username": "Connor Steele",
+    "favorites": [{ "task_id": "1af0jruup5gu" }]
+  },
+
   { "id": "123912389213892138219", "username": "Brian Alves" },
   { "id": "696969696969", "username": "Shelby Mitchell" },
   { "id": "69420", "username": "Fitale Wari" },

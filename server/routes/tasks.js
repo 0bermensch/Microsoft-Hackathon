@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
     return {
       id: task.id,
       title: task.title,
+      owner: task.owner,
       description: task.description,
       date: task.date,
       timestamp: task.timestamp,
@@ -52,15 +53,17 @@ router.post("/", (req, res) => {
     description: req.body.description,
     date: req.body.date,
     timestamp: req.body.timestamp,
+    status: req.body.status,
+    percentage: req.body.percentage,
     imageUrl: req.body.imageUrl,
-    comments: [],
+    owner: req.body.owner,
   };
-  if (!newtask.title || !newtask.description || !newtask.imageUrl) {
-    return res.status(400).json({
-      errorMessage:
-        "Please provide title, description, and imageUrl for the task",
-    });
-  }
+  // if (!newtask.title || !newtask.description || !newtask.imageUrl) {
+  //   return res.status(400).json({
+  //     errorMessage:
+  //       "Please provide title, description, and imageUrl for the task",
+  //   });
+  // }
   tasks.push(newtask);
   helper.writeJSONFile(tasksFile, tasks);
   res.json(tasks);
