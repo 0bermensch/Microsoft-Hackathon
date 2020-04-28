@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Segoeui;
+  src: url("../assets/fonts/segoeui.ttf");
+}
+
+@font-face {
+  font-family: SegoeBold;
+  src: url("../assets/fonts/segoeuib.ttf");
+}
+
 /* Slyle  default to mobile, then @media for other devices */
 /* media query for tablet */
 /* media query for landscape, medium pixel desktops */
@@ -56,6 +66,33 @@
   width: 200px;
   padding: 10px;
   border: 1px solid black;
+}
+
+.header {
+  width: 100vw;
+  height: 48px;
+  background-color: #464773;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_left {
+  width: 68px;
+}
+
+.main_middle {
+  width: 320px;
+  height: 768px;
+  background-color: #555555;
+}
+
+.main_right {
+  background-color: blue;
+  width: 80vw;
 }
 
 *,

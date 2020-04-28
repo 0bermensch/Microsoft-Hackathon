@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  &_left {
+    width: 68px;
+  }
+  &_middle {
+    width: 320px;
+    height: 768px;
+    background-color: #555555;
+  }
+  &_right {
+    background-color: blue;
+    width: 80vw;
+  }
+}
