@@ -20,6 +20,8 @@ router.get("/", (req, res) => {
       description: task.description,
       date: task.date,
       timestamp: task.timestamp,
+      status: task.status,
+      percentage: task.percentage,
       imageUrl: task.imageUrl,
     };
   });
