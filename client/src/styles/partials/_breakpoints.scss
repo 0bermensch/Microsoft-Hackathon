@@ -1,0 +1,29 @@
+/* Slyle  default to mobile, then @media for other devices */
+
+/* media query for tablet */
+
+@mixin small {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin medium {
+  @media only screen and (min-width: 767px) {
+    @content;
+  }
+}
+
+/* media query for landscape, medium pixel desktops */
+
+@mixin large {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+/* media query for high pixel dencity desktops */
+@mixin huge {
+  @media only screen and (min-width: 1439px) {
+    @content;
+  }
+}

@@ -1,3 +1,63 @@
+/* Slyle  default to mobile, then @media for other devices */
+/* media query for tablet */
+/* media query for landscape, medium pixel desktops */
+/* media query for high pixel dencity desktops */
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 400px;
+  border: 3px solid black;
+}
+
+.task__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.task__description {
+  width: 300px;
+  height: 200px;
+}
+
+.task__field {
+  width: 100%;
+  padding: 5px;
+}
+
+.task__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
 *,
 html,
 body {
