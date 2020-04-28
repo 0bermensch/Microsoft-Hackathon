@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1af0jruup5gu",
+    "title": "MY First Cool Task",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81kqrwS1nNL.jpg",
+    "description": "this is my cool task to do",
+    "date": "12/12/2012",
+    "timestamp": "date now",
+    "status": "in-progress",
+    "estimated_completion": "2 hours",
+    "percentage": "25"
+  }
+]
