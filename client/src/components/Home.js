@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
 import Calendar from "./Calendar";
+
 export default class Home extends Component {
   state = {
     tasks: [], //stores all the tasks from db
@@ -19,6 +20,7 @@ export default class Home extends Component {
     selectedPriority: "",
     selectedStatus: "",
     schedule: {},
+    calendarItem: [], // display tasks in calendar
 
     //used specifically for date picker, can be deleted if we switch date picker
     selectedDay: undefined,
@@ -83,22 +85,23 @@ export default class Home extends Component {
 
         //setup the schedule by assigning each itme to a spot based on time
         ///only one item can be assigned to one time slot currently
-        timeArr.map((hour, i) => {
-          res.data.map((item) => {
-            // if (i > 0) {
-            //   //loop through the time arr, remove all non-number characters
-            //   //split it out at the : to handle grabbing just the FIRST PART of the number
-            //   if (
-            //     hour.replace(/\D/g, "") ===
-            //     moment(item.starttime)["_i"].split(":")[0]
-            //   ) {
-            //     //if the time and the hour slot align, add it to the schedule object
-            //     schedule[moment(item.starttime)["_i"].split(":")[0]] =
-            //       item.title;
-            //   }
-            // }
-          });
-        });
+        // timeArr.map((hour, i) => {
+        //   res.data.map((item) => {
+        //     if (i > 0) {
+        //       //loop through the time arr, remove all non-number characters
+        //       //split it out at the : to handle grabbing just the FIRST PART of the number
+        //       if (
+        //         hour.replace(/\D/g, "") ===
+        //         moment(item.starttime)["_i"].split(":")[0]
+        //       ) {
+        //         //if the time and the hour slot align, add it to the schedule object
+        //         schedule[moment(item.starttime)["_i"].split(":")[0]] =
+        //           item.title;
+        //       }
+        //     }
+        //   });
+        // });
+
       });
       this.setState({ tasks: res.data });
       this.setState({ schedule: schedule });
@@ -209,6 +212,20 @@ export default class Home extends Component {
       day: day,
     });
   }
+
+  addTaskItemToCal = (e) => {
+    e.preventDefault();
+    let toDoItem = document.querySelector(".taskpage_button").id;
+    console.log(toDoItem);
+    this.state.tasks.filter((item) => {
+      if (item.id === toDoItem) {
+        this.setState({
+          calendarItem: item.title,
+        });
+      }
+    });
+  };
+
   render() {
     if (!this.state) {
       return <h2>loading...</h2>;
@@ -229,15 +246,18 @@ export default class Home extends Component {
                   <h3 className="right_cal-date">{this.state.date}</h3>
                   <h5 className="right_cal-day">{this.state.day}</h5>
                 </div>
-                <Calendar
+                {/* <Calendar
                   time={this.state.time}
                   schedule={this.state.schedule}
-                />
-                {/* <div className="right_purple morning">
+                /> */}
+                <div className="right_purple morning">
                   <h3 className="right_purple-innertext">Morning Standup</h3>
                 </div>
                 <div className="right_blue morning">
                   <h3 className="right_blue-innertext">Working Time</h3>
+                  <h3 className="right_blue-inntertext">
+                    {this.state.calendarItem}
+                  </h3>
                 </div>
                 <div className="right_purple afternoon">
                   <h3 className="right_purple-innertext">Noon Standup</h3>
@@ -247,31 +267,31 @@ export default class Home extends Component {
                 </div>
                 <div className="right_purple end">
                   <h3 className="right_purple-innertext">End of Day Standup</h3>
-                </div> */}
+                </div>
               </div>
             </div>
           </aside>
-          <Route path="/">
-            <aside className="main_right">
-              <Taskpage
-                tasks={this.state.tasks}
-                handleOpenModal={this.handleOpenModal}
-                handleCloseModal={this.handleCloseModal}
-                handleTaskSubmit={this.handleTaskSubmit}
-                showModal={this.state.showModal}
-                users={this.state.users}
-                handleSelectedUser={this.handleSelectedUser}
-                selectedUser={this.state.selectedUser}
-                handleSelectedType={this.handleSelectedType}
-                selectedType={this.state.selectedType}
-                handleSelectedPriority={this.handleSelectedPriority}
-                selectedPriority={this.selectedPriority}
-                handleSelectedStatus={this.handleSelectedStatus}
-                selectedStatus={this.selectedStatus}
-              />
-              {/* <Modal/> */}
-            </aside>
-          </Route>
+
+          <aside className="main_right">
+            <Taskpage
+              addTaskItemToCal={this.addTaskItemToCal}
+              tasks={this.state.tasks}
+              handleOpenModal={this.handleOpenModal}
+              handleCloseModal={this.handleCloseModal}
+              handleTaskSubmit={this.handleTaskSubmit}
+              showModal={this.state.showModal}
+              users={this.state.users}
+              handleSelectedUser={this.handleSelectedUser}
+              selectedUser={this.state.selectedUser}
+              handleSelectedType={this.handleSelectedType}
+              selectedType={this.state.selectedType}
+              handleSelectedPriority={this.handleSelectedPriority}
+              selectedPriority={this.selectedPriority}
+              handleSelectedStatus={this.handleSelectedStatus}
+              selectedStatus={this.selectedStatus}
+            />
+            {/* <Modal/> */}
+          </aside>
         </main>
       );
     }

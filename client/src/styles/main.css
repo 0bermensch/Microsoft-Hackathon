@@ -110,7 +110,7 @@
 
 .header_div-svg {
   position: absolute;
-  left: 388px;
+  left: 370px;
   top: 13px;
   z-index: 9;
 }
@@ -121,7 +121,7 @@
 
 .header_div-input {
   position: absolute;
-  left: 20.2%;
+  left: 25%;
   top: 8px;
   padding-left: 35px;
   outline: none;
@@ -292,6 +292,8 @@
 }
 
 .main_middle-container .right_purple {
+  width: 230px;
+  height: 30px;
   border-radius: 2px;
   background-color: #ddd3ea;
   display: -webkit-box;
@@ -331,6 +333,8 @@
 }
 
 .main_middle-container .right_blue {
+  width: 230px;
+  height: 210px;
   border-radius: 2px;
   background-color: #c2dff4;
 }
@@ -362,6 +366,10 @@
   width: 80vw;
 }
 
+li {
+  list-style-type: none;
+}
+
 .taskpage__all {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,7 +392,7 @@ a {
 }
 
 .taskpage__icon {
-  margin-top: .2%;
+  margin-top: 0.2%;
   padding-top: 50%;
   padding-bottom: 50%;
   padding-left: 22px;
@@ -393,8 +401,12 @@ a {
 
 .taskpage__new {
   height: 39px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   width: 75vw;
+}
+
+.taskpage__new:hover {
+  cursor: pointer;
 }
 
 .taskpage__headers {
@@ -402,7 +414,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -484,7 +496,7 @@ a {
           flex-direction: row;
   width: 75vw;
   margin-left: 0px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   padding-left: 91px;
   min-height: 43px;
   padding-top: 10px;
@@ -510,7 +522,7 @@ a {
   width: 75vw;
   height: 43px;
   padding-left: 91px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   min-height: 43px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -597,16 +609,24 @@ a {
   width: 20%;
 }
 
-.modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+
+.taskpage_button {
+  position: absolute;
+  left: 395px;
+  border: none;
+  outline: none;
+}
+
+.taskpage_button:hover {
+  cursor: pointer;
+  border: 1px solid #605e5c;
+  border-radius: 50%;
+}
+
+.taskpage_button-svg {
+  fill: #252423;
+
+
 }
 
 .modal__popup {
