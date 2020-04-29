@@ -257,7 +257,7 @@ export default class Home extends Component {
                 </div>
                 <div className="right_blue morning">
                   <h3 className="right_blue-innertext">Working Time</h3>
-                  <h3 className="right_blue-inntertext">
+                  <h3 className="right_blue-innertext">
                     {this.state.calendarItem}
                   </h3>
                 </div>

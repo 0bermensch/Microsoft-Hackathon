@@ -14,7 +14,7 @@ class Taskpage extends Component {
             <div className="taskpage__icon">
               <img src={Icon} alt="initials" />
             </div>
-            <div className="taskpage__main">Working Time</div>
+            <h3 className="taskpage__main">Working Time</h3>
             <div className="taskpage__secondary">
               <NavLink to="/" activeClassName="active-link1" exact>
                 Tasks

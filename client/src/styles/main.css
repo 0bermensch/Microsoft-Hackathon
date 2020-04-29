@@ -424,12 +424,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 9%;
-      flex-basis: 9%;
   height: 59px;
-  width: 80vw;
   border-bottom: 2px;
-  width: 120px;
+  width: 140px;
   height: 24px;
   font-family: SegoeUI;
   font-size: 18px;
@@ -467,6 +464,13 @@ a {
 }
 
 .active-link2 {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #464773;
+}
+
+.active-link3 {
   text-decoration: none;
   color: black;
   padding-bottom: 17px;
@@ -616,16 +620,18 @@ a {
   left: 395px;
   border: none;
   outline: none;
+  border-radius: 4px;
+  background-color: #6264a5;
 }
 
 .taskpage_button:hover {
   cursor: pointer;
-  border: 1px solid #605e5c;
-  border-radius: 50%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .taskpage_button-svg {
-  fill: #252423;
+  fill: #ffffff;
 }
 
 .modal {
