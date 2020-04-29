@@ -1,16 +1,30 @@
 .modal {
+  @include flex-row-nowrap;
   &__popup {
     position: absolute;
     top: 80px;
     bottom: 80px;
-    left: 29%;
-    right: 29%;
+    // left: 29%;
+    // right: 29%;
     background-color: $white;
     font-family: "SegoeUI";
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 580px;
+    height: 575px;
+  }
+  &__form {
+    width: 500px;
+    height: 800px;
   }
 
   &__content {
     margin: 32px 40px 40px 26px;
+    width: 600px;
+    height: 429px;
   }
 
   &__overlay {
