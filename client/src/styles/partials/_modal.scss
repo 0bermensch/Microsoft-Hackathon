@@ -1,0 +1,107 @@
+.modal {
+  &__popup {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 29%;
+    right: 29%;
+    background-color: $white;
+    font-family: "SegoeUI";
+  }
+
+  &__content {
+    margin: 32px 40px 40px 26px;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__header {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__close {
+    width: 10px;
+    height: 10px;
+  }
+
+  &__form-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    width: 100%;
+    height: 33px;
+    border: none;
+    border-bottom: 2px solid $calendar-date;
+    border-radius: 2px;
+    background-color: #f3f2f1;
+    padding: 6px 0 6px 12px;
+    font-family: "Segoeui";
+    margin-bottom: 22px;
+  }
+
+  &__select {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 32px;
+    margin-bottom: 22px;
+  }
+
+  &__dropdown {
+    width: 178px;
+    height: 32px;
+    border-radius: 2px;
+    background-color: $modal-dropdown;
+    border: none;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 6px 0 6px 12px;
+    font-size: 14px;
+    font-family: "Segoeui";
+  }
+
+  &__buttons-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  &__button--cancel {
+    border: none;
+    width: 96px;
+    height: 32px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #e1dfdd;
+    background-color: #ffffff;
+    font-size: 14px;
+  }
+
+  &__button--save {
+    border: none;
+    width: 96px;
+    height: 32px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: #6264a5;
+    margin-left: 10px;
+    font-size: 14px;
+    color: $white;
+  }
+}
