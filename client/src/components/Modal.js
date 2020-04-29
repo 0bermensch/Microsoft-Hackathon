@@ -5,7 +5,7 @@ import Button from "../assets/icons/button.png";
 
 export default class Modal extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className="modal">
         <div className="modal__button" onClick={this.props.handleOpenModal}>
