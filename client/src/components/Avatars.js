@@ -12,6 +12,7 @@ import Avatar6 from "../assets/images/Group 20.png";
 import Floorplan from "../assets/images/Office Picture.svg";
 import nav from "../assets/images/left-navbar.png";
 import Icon from "../assets/icons/br.png";
+import Countdown from "./Countdown";
 
 export default class Avatars extends Component {
   state = {
@@ -117,13 +118,7 @@ export default class Avatars extends Component {
               </div>
               <div className="workspace">
                 <div className="avatar__topbar">
-                  <div className="dot__container">
-                    <div className="dot">
-                      <span className="center-this">Hours</span>
-                    </div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                  </div>
+                <Countdown/>
 
                   <div className="avatar__join">
                     <div className="avatar__join--text">
