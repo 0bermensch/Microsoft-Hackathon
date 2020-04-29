@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import moment from "moment";
+// import moment from "moment";
 import Helper from "./Helper";
 const HelperClass = new Helper();
 const dateObj = new Date();
