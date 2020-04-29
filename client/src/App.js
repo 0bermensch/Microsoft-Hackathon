@@ -9,92 +9,15 @@ import "./components/TaskForm";
 import Header from "./components/Header";
 import Home from "./components/Home";
 export default class App extends Component {
-  state = {
-    tasks: [],
-    users: [],
-    selectedUser: "",
-
-    //used specifically for date picker, can be deleted if we switch date picker
-    selectedDay: undefined,
-    isEmpty: true,
-    isDisabled: false,
-  };
-  getUsers = (id) => {
-    if (id) {
-      axios.get("http://localhost:5000/users/" + id).then((res) => {
-        this.setState({
-          users: res.data,
-        });
-      });
-    }
-    axios.get("http://localhost:5000/users").then((res) => {
-      this.setState({
-        users: res.data,
-      });
-    });
-  };
-
-  getTasks = () => {
-    axios.get("http://localhost:5000/tasks").then((res) => {
-      this.setState({ tasks: res.data });
-    });
-  };
-
-  handleSelectedUser = (e) => {
-    var index = e.nativeEvent.target.selectedIndex; //tried to do something fancy
-    // e.target.value is the same as above^
-
-    this.setState({
-      selectedUser: e.nativeEvent.target[index].value,
-    });
-  };
-
-  //handles sumbitting the task
-  handleTaskSubmit = (event) => {
-    event.preventDefault();
-    axios
-      .post("http://localhost:5000/tasks", {
-        title: event.target.title.value,
-        date: this.state.selectedDay,
-        description: event.target.description.value,
-        timestamp: new Date(),
-        status: event.target.status.value,
-        estimated_completion: "2 hours",
-        imageUrl: "www.google.com",
-        owner: this.state.selectedUser, //get the selected user from state
-      })
-      .then((res) => {
-        this.setState({
-          tasks: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    event.target.reset();
-  };
-
-  //setup the day in the state
-  handleDayChange = (selectedDay, modifiers, dayPickerInput) => {
-    const input = dayPickerInput.getInput();
-    this.setState({
-      selectedDay: selectedDay,
-      isEmpty: !input.value.trim(),
-      isDisabled: modifiers.disabled === true,
-    });
-  };
-  componentDidMount() {
-    this.getUsers();
-    this.getTasks();
-  }
 
   render() {
     return (
       <Router>
         <Header />
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path="/">
+            <Home />
+            </Route> 
         </Switch>
       </Router>
       // <div>
