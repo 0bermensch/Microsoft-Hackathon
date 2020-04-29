@@ -1,0 +1,102 @@
+.avatar {
+  @include flex-row-nowrap;
+  padding-right: 40px;
+  &img {
+    width: 74px;
+    height: 99px;
+  }
+  &__join {
+    font-family: Segoeui;
+    margin-right: 42px;
+    @include flex-row-nowrap;
+    height: 42px;
+    width: 323px;
+    border-radius: 3px;
+    justify-content: space-between;
+    background-color: #2a3370;
+    color: white;
+
+    &--text {
+      margin: 12px;
+      font-family: SegoeUI;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
+    }
+    &--button {
+      border: unset;
+      box-shadow: unset;
+      font-family: Segoeui;
+      width: 96px;
+      height: 32px;
+      border-radius: 3px;
+      background-color: #6264a7;
+      color: white;
+      margin: 5px;
+    }
+  }
+  &s {
+    @include flex-row-nowrap;
+
+    // justify-content: space-evenly;
+  }
+  &__bar {
+    @include flex-row-nowrap;
+    justify-content: baseline;
+    align-self: baseline;
+    margin-left: 40px;
+  }
+  &__topbar {
+    @include flex-row-nowrap;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    // height: 200px;
+  }
+}
+.dot {
+  z-index: 55;
+  margin-right: 15px;
+  margin-top: 21px;
+  height: 90px;
+  width: 90px;
+  background-color: #bbb;
+  border-radius: 50%;
+  text-align: center;
+  //   @include flex-column-nowrap;
+  &__container {
+    @include flex-row-nowrap;
+  }
+  //   margin: 0 auto;
+  &:first-child {
+    margin-left: 21px;
+  }
+}
+.center-this {
+  align-self: center;
+}
+.link_holder {
+  height: 60px;
+}
+.workspace {
+  height: 708px;
+  background-color: #cfe2e9;
+  //   background-image: url("../assets/images/Office\ Picture.svg");
+  //   @include flex-row-nowrap;
+  &__background {
+    &--container {
+      @include flex-row-nowrap;
+      justify-content: center;
+    }
+    margin: 0;
+    height: 511px;
+    width: 662px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+}

@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
 import Calendar from "./Calendar";
+import Avatars from "./Avatars";
 export default class Home extends Component {
   state = {
     tasks: [], //stores all the tasks from db
@@ -253,7 +254,8 @@ export default class Home extends Component {
           </aside>
           <Route path="/">
             <aside className="main_right">
-              <Taskpage
+              <Avatars />
+              {/* <Taskpage
                 tasks={this.state.tasks}
                 handleOpenModal={this.handleOpenModal}
                 handleCloseModal={this.handleCloseModal}
@@ -268,7 +270,7 @@ export default class Home extends Component {
                 selectedPriority={this.selectedPriority}
                 handleSelectedStatus={this.handleSelectedStatus}
                 selectedStatus={this.selectedStatus}
-              />
+              /> */}
               {/* <Modal/> */}
             </aside>
           </Route>
