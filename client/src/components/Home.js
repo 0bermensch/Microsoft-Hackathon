@@ -123,6 +123,8 @@ export default class Home extends Component {
   };
 
   handleSelectedType = (e) => {
+    console.log("get selected type");
+    console.log("selected type is: ", e.nativeEvent.target.value);
     this.setState({
       selectedType: e.nativeEvent.target.value,
     });
@@ -262,10 +264,10 @@ export default class Home extends Component {
                 selectedUser={this.state.selectedUser}
                 handleSelectedType={this.handleSelectedType}
                 selectedType={this.state.selectedType}
-                handleSelectedPriority={this.props.handleSelectedPriority}
-                selectedPriority={this.props.selectedPriority}
-                handleSelectedStatus={this.props.handleSelectedStatus}
-                selectedStatus={this.props.selectedStatus}
+                handleSelectedPriority={this.handleSelectedPriority}
+                selectedPriority={this.selectedPriority}
+                handleSelectedStatus={this.handleSelectedStatus}
+                selectedStatus={this.selectedStatus}
               />
               {/* <Modal/> */}
             </aside>
