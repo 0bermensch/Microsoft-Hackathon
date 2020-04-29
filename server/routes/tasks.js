@@ -25,6 +25,8 @@ router.get("/", (req, res) => {
       status: task.status,
       percentage: task.percentage,
       imageUrl: task.imageUrl,
+      timer: task.timer,
+      starttime: task.starttime,
     };
   });
   res.json(taskList);
@@ -51,6 +53,8 @@ router.post("/", (req, res) => {
   const newtask = {
     id: helper.getNewId(),
     title: req.body.title,
+    type: req.body.type,
+    priority: req.body.priority,
     description: req.body.description,
     date: req.body.date,
     timestamp: req.body.timestamp,
@@ -58,6 +62,8 @@ router.post("/", (req, res) => {
     percentage: req.body.percentage,
     imageUrl: req.body.imageUrl,
     owner: req.body.owner,
+    timer: req.body.timer,
+    starttime: req.body.starttime,
   };
   // if (!newtask.title || !newtask.description || !newtask.imageUrl) {
   //   return res.status(400).json({
