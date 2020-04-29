@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
 import Calendar from "./Calendar";
+import StandUp from "./StandUp";
 export default class Home extends Component {
   state = {
     tasks: [], //stores all the tasks from db
@@ -251,7 +252,7 @@ export default class Home extends Component {
               </div>
             </div>
           </aside>
-          <Route path="/">
+          <Route path="/" exact>
             <aside className="main_right">
               <Taskpage
                 tasks={this.state.tasks}
@@ -269,7 +270,11 @@ export default class Home extends Component {
                 handleSelectedStatus={this.handleSelectedStatus}
                 selectedStatus={this.selectedStatus}
               />
-              {/* <Modal/> */}
+            </aside>
+          </Route>
+          <Route path="/standup">
+            <aside className="main_right">
+              <StandUp />
             </aside>
           </Route>
         </main>

@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import Icon from "../assets/icons/br.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 class Taskpage extends Component {
   render() {
@@ -57,15 +57,17 @@ class Taskpage extends Component {
 
         {this.props.tasks.map((task, index) => {
           return (
-            <div className="taskpage__tasks">
-              <div className="taskpage__task" key={index}>
-                <div className="taskpage__tasktitle"> {task.title} </div>
-                <div className="taskpage__tasktype">{task.type} </div>
-                <div className="taskpage__taskteammember">{task.owner}</div>
-                <div className="taskpage__taskpriority">{task.priority}</div>
-                <div className="taskpage__taskstatus">{task.status}</div>
+            <Link to="/standup">
+              <div className="taskpage__tasks">
+                <div className="taskpage__task" key={index}>
+                  <div className="taskpage__tasktitle"> {task.title} </div>
+                  <div className="taskpage__tasktype">{task.type} </div>
+                  <div className="taskpage__taskteammember">{task.owner}</div>
+                  <div className="taskpage__taskpriority">{task.priority}</div>
+                  <div className="taskpage__taskstatus">{task.status}</div>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </>
