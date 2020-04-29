@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
@@ -17,7 +18,9 @@ export default class Header extends Component {
             />
             <path d="M0 0h24v24H0z" fill="none" />
           </svg>
-          <h3 className="header_app-holder-title">Microsoft Teams</h3>
+          <Link to="/">
+            <h3 className="header_app-holder-title">Microsoft Teams</h3>
+          </Link>
         </div>
         <div className="header_div">
           <svg
