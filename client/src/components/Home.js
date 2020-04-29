@@ -85,18 +85,18 @@ export default class Home extends Component {
         ///only one item can be assigned to one time slot currently
         timeArr.map((hour, i) => {
           res.data.map((item) => {
-            if (i > 0) {
-              //loop through the time arr, remove all non-number characters
-              //split it out at the : to handle grabbing just the FIRST PART of the number
-              if (
-                hour.replace(/\D/g, "") ===
-                moment(item.starttime)["_i"].split(":")[0]
-              ) {
-                //if the time and the hour slot align, add it to the schedule object
-                schedule[moment(item.starttime)["_i"].split(":")[0]] =
-                  item.title;
-              }
-            }
+            // if (i > 0) {
+            //   //loop through the time arr, remove all non-number characters
+            //   //split it out at the : to handle grabbing just the FIRST PART of the number
+            //   if (
+            //     hour.replace(/\D/g, "") ===
+            //     moment(item.starttime)["_i"].split(":")[0]
+            //   ) {
+            //     //if the time and the hour slot align, add it to the schedule object
+            //     schedule[moment(item.starttime)["_i"].split(":")[0]] =
+            //       item.title;
+            //   }
+            // }
           });
         });
       });

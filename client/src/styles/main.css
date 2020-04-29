@@ -597,18 +597,42 @@ a {
   width: 20%;
 }
 
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .modal__popup {
   position: absolute;
   top: 80px;
   bottom: 80px;
-  left: 29%;
-  right: 29%;
   background-color: #ffffff;
   font-family: "SegoeUI";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 580px;
+  height: 575px;
+}
+
+.modal__form {
+  width: 500px;
+  height: 800px;
 }
 
 .modal__content {
   margin: 32px 40px 40px 26px;
+  width: 600px;
+  height: 429px;
 }
 
 .modal__overlay {
