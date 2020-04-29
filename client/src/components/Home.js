@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
 import Calendar from "./Calendar";
+import StandUp from "./StandUp";
 
 import Avatars from "./Avatars";
 

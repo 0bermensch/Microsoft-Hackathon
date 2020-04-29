@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import Icon from "../assets/icons/br.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 class Taskpage extends Component {
   render() {
