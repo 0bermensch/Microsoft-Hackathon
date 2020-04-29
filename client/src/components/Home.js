@@ -1,13 +1,97 @@
 import React, { Component } from "react";
+import Modal from "../components/Modal";
+import axios from "axios";
 
 import nav from "../assets/images/left-navbar.png";
 
 export default class Home extends Component {
   state = {
+    tasks: [],
+    users: [],
+    selectedUser: "",
     date: "",
     day: "",
+    showModal: false,
+
+    //used specifically for date picker, can be deleted if we switch date picker
+    selectedDay: undefined,
+    isEmpty: true,
+    isDisabled: false,
   };
+  getUsers = (id) => {
+    if (id) {
+      axios.get("http://localhost:5000/users/" + id).then((res) => {
+        this.setState({
+          users: res.data,
+        });
+      });
+    }
+    axios.get("http://localhost:5000/users").then((res) => {
+      this.setState({
+        users: res.data,
+      });
+    });
+  };
+
+  getTasks = () => {
+    axios.get("http://localhost:5000/tasks").then((res) => {
+      this.setState({ tasks: res.data });
+    });
+  };
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  };
+
+  handleSelectedUser = (e) => {
+    var index = e.nativeEvent.target.selectedIndex; //tried to do something fancy
+    // e.target.value is the same as above^
+
+    this.setState({
+      selectedUser: e.nativeEvent.target.value,
+    });
+    console.log(e.nativeEvent.target.value, this.state);
+  };
+
+  //handles sumbitting the task
+  handleTaskSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post("http://localhost:5000/tasks", {
+        title: event.target.title.value,
+        type: event.target.type.value,
+        // owner: event.target.owner.value,
+        // date: this.state.selectedDay,
+        // timestamp: new Date(),
+      })
+      .then((res) => {
+        this.setState({
+          tasks: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    event.target.reset();
+  };
+
+  //setup the day in the state
+  handleDayChange = (selectedDay, modifiers, dayPickerInput) => {
+    const input = dayPickerInput.getInput();
+    this.setState({
+      selectedDay: selectedDay,
+      isEmpty: !input.value.trim(),
+      isDisabled: modifiers.disabled === true,
+    });
+  };
+
   componentDidMount() {
+    this.getUsers();
+    this.getTasks();
     const today = new Date();
     let monthIdx = today.getMonth();
     let month_arr = [
@@ -35,6 +119,7 @@ export default class Home extends Component {
     });
   }
   render() {
+    console.log(this.props);
     if (!this.state) {
       return <h2>loading...</h2>;
     } else {
@@ -72,7 +157,17 @@ export default class Home extends Component {
               </div>
             </div>
           </aside>
-          <aside className="main_right"></aside>
+          <aside className="main_right">
+            <Modal
+              handleOpenModal={this.handleOpenModal}
+              handleCloseModal={this.handleCloseModal}
+              handleTaskSubmit={this.handleTaskSubmit}
+              showModal={this.state.showModal}
+              users={this.state.users}
+              handleSelectedUser={this.handleSelectedUser}
+              selectedUser={this.state.selectedUser}
+            />
+          </aside>
         </main>
       );
     }
