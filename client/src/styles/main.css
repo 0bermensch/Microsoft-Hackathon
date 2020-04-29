@@ -366,6 +366,146 @@
   width: 80vw;
 }
 
+.taskpage__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80vw;
+}
+
+.taskpage__main {
+  height: 59px;
+  width: 80vw;
+  border-bottom: 2px;
+  width: 120px;
+  height: 24px;
+  font-family: SegoeUI;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #484644;
+}
+
+.taskpage__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 75vw;
+  margin-left: 0px;
+  border: 1px solid #EDEBE9;
+  padding-left: 91px;
+  min-height: 43px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: SegoeUI;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #484644;
+}
+
+.taskpage__tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 75vw;
+  height: 43px;
+  padding-left: 91px;
+  border: 1px solid #EDEBE9;
+  min-height: 43px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: SegoeUI;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #484644;
+}
+
+.taskpage__task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.taskpage__titles--title {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+.taskpage__titles--type {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.taskpage__titles--teammember {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+
+.taskpage__titles--priority {
+  -ms-flex-preferred-size: 7%;
+      flex-basis: 7%;
+}
+
+.taskpage__titles--status {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+
+.taskpage__tasktitle {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  width: 20%;
+}
+
+.taskpage__tasktype {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  width: 20%;
+}
+
+.taskpage__taskteammember {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  width: 20%;
+}
+
+.taskpage__taskpriority {
+  -ms-flex-preferred-size: 7%;
+      flex-basis: 7%;
+  width: 20%;
+}
+
+.taskpage__taskstatus {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  width: 20%;
+}
+
 *,
 html,
 body {

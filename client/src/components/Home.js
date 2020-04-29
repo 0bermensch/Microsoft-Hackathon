@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "../components/Modal";
 import axios from "axios";
+import Taskpage from "./Taskpage";
 
 import nav from "../assets/images/left-navbar.png";
 
@@ -158,15 +159,15 @@ export default class Home extends Component {
             </div>
           </aside>
           <aside className="main_right">
-            <Modal
-              handleOpenModal={this.handleOpenModal}
-              handleCloseModal={this.handleCloseModal}
-              handleTaskSubmit={this.handleTaskSubmit}
-              showModal={this.state.showModal}
-              users={this.state.users}
-              handleSelectedUser={this.handleSelectedUser}
-              selectedUser={this.state.selectedUser}
-            />
+          <Taskpage tasks={this.state.tasks} 
+          handleOpenModal={this.handleOpenModal}
+          handleCloseModal={this.handleCloseModal}
+          handleTaskSubmit={this.handleTaskSubmit}
+          showModal={this.state.showModal}
+          users={this.state.users}
+          handleSelectedUser={this.handleSelectedUser}
+          selectedUser={this.state.selectedUser}/>
+          {/* <Modal/> */}
           </aside>
         </main>
       );

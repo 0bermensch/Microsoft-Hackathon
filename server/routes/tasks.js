@@ -17,9 +17,10 @@ router.get("/", (req, res) => {
     return {
       id: task.id,
       title: task.title,
+      type: task.type,
       owner: task.owner,
       description: task.description,
-      date: task.date,
+      priority: task.priority,
       timestamp: task.timestamp,
       status: task.status,
       percentage: task.percentage,
