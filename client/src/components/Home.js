@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import Modal from "../components/Modal";
 import axios from "axios";
 import Taskpage from "./Taskpage";
-import {
-  BrowserRouter as Router,
-
-  Route,
-} from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import nav from "../assets/images/left-navbar.png";
 
@@ -56,7 +51,7 @@ export default class Home extends Component {
   };
 
   handleSelectedUser = (e) => {
-    var index = e.nativeEvent.target.selectedIndex; //tried to do something fancy
+    // var index = e.nativeEvent.target.selectedIndex; //tried to do something fancy
     // e.target.value is the same as above^
 
     this.setState({
@@ -188,25 +183,25 @@ export default class Home extends Component {
             </div>
           </aside>
           <Route path="/">
-          <aside className="main_right">
-            <Taskpage
-              tasks={this.state.tasks}
-              handleOpenModal={this.handleOpenModal}
-              handleCloseModal={this.handleCloseModal}
-              handleTaskSubmit={this.handleTaskSubmit}
-              showModal={this.state.showModal}
-              users={this.state.users}
-              handleSelectedUser={this.handleSelectedUser}
-              selectedUser={this.state.selectedUser}
-              handleSelectedType={this.handleSelectedType}
-              selectedType={this.state.selectedType}
-              handleSelectedPriority={this.props.handleSelectedPriority}
-              selectedPriority={this.props.selectedPriority}
-              handleSelectedStatus={this.props.handleSelectedStatus}
-              selectedStatus={this.props.selectedStatus}
-            />
-            {/* <Modal/> */}
-          </aside>
+            <aside className="main_right">
+              <Taskpage
+                tasks={this.state.tasks}
+                handleOpenModal={this.handleOpenModal}
+                handleCloseModal={this.handleCloseModal}
+                handleTaskSubmit={this.handleTaskSubmit}
+                showModal={this.state.showModal}
+                users={this.state.users}
+                handleSelectedUser={this.handleSelectedUser}
+                selectedUser={this.state.selectedUser}
+                handleSelectedType={this.handleSelectedType}
+                selectedType={this.state.selectedType}
+                handleSelectedPriority={this.props.handleSelectedPriority}
+                selectedPriority={this.props.selectedPriority}
+                handleSelectedStatus={this.props.handleSelectedStatus}
+                selectedStatus={this.props.selectedStatus}
+              />
+              {/* <Modal/> */}
+            </aside>
           </Route>
         </main>
       );
