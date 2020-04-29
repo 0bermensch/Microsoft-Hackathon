@@ -7,7 +7,7 @@
   position: relative;
   &_app-holder {
     position: absolute;
-    left: 22px;
+    left: 23px;
     display: flex;
     width: 344px;
     &-svg {
@@ -29,9 +29,11 @@
   }
   &_div {
     // display: flex;
+    
     &-svg {
+      
       position: absolute;
-      left: 375px;
+      left: 388px;
       top: 13px;
       z-index: 9;
       .fill {
@@ -40,7 +42,7 @@
     }
     &-input {
       position: absolute;
-      left: 366px;
+      left: 20.2%;
       top: 8px;
       padding-left: 35px;
       outline: none;

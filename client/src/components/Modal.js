@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
+import Button from "../assets/icons/button.png";
+
 
 export default class Modal extends Component {
   render() {
     return (
       <div className="modal">
-        <button onClick={this.props.handleOpenModal}>Create New</button>
+        <div className="modal__button" onClick={this.props.handleOpenModal}><img src={Button} alt="button" /> </div>
         <ReactModal ariaHideApp={false} isOpen={this.props.showModal}>
           {/* Modal.setAppElement(el) */}
           <div className="modal__">

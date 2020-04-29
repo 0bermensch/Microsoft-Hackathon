@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Modal from "../components/Modal";
 import axios from "axios";
 import Taskpage from "./Taskpage";
+import {
+  BrowserRouter as Router,
+
+  Route,
+} from "react-router-dom";
 
 import nav from "../assets/images/left-navbar.png";
 
@@ -158,6 +163,7 @@ export default class Home extends Component {
               </div>
             </div>
           </aside>
+          <Route path="/">
           <aside className="main_right">
           <Taskpage tasks={this.state.tasks} 
           handleOpenModal={this.handleOpenModal}
@@ -169,6 +175,7 @@ export default class Home extends Component {
           selectedUser={this.state.selectedUser}/>
           {/* <Modal/> */}
           </aside>
+          </Route>
         </main>
       );
     }
