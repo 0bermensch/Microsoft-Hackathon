@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
 import modalx from "../assets/icons/x-big.png";
+import Button from "../assets/icons/button.png";
 
 export default class Modal extends Component {
   render() {
     console.log(this.props);
     return (
       <div className="modal">
-        <button onClick={this.props.handleOpenModal}>Create New</button>
+        <div className="modal__button" onClick={this.props.handleOpenModal}>
+          <img src={Button} alt="button" />{" "}
+        </div>
         <ReactModal
           className="modal__popup"
           overlayClassName="modal__overlay"
