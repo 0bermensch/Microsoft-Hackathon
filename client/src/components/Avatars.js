@@ -11,12 +11,6 @@ import { NavLink } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="link_holder">
-        <NavLink to="/tasks" activeClassName="active-link1">
-          Tasks
-        </NavLink>
-      </div>
-
       <div className="workspace">
         <div className="avatar__topbar">
           <div className="dot__container">
@@ -35,7 +29,9 @@ function App() {
             </div>
             <div className="avatar__join-but">
               {" "}
-              <button className="avatar__join--button">Join</button>
+              <NavLink to="/meeting">
+                <button className="avatar__join--button">Join</button>
+              </NavLink>
             </div>{" "}
           </div>
         </div>
