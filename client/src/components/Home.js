@@ -5,13 +5,10 @@ import { Route } from "react-router-dom";
 import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
 import Calendar from "./Calendar";
-<<<<<<< HEAD
 import StandUp from "./StandUp";
-=======
 
 import Avatars from "./Avatars";
 
->>>>>>> master
 export default class Home extends Component {
   state = {
     tasks: [], //stores all the tasks from db
@@ -107,7 +104,6 @@ export default class Home extends Component {
         //     }
         //   });
         // });
-
       });
       this.setState({ tasks: res.data });
       this.setState({ schedule: schedule });
@@ -277,37 +273,9 @@ export default class Home extends Component {
               </div>
             </div>
           </aside>
-<<<<<<< HEAD
-          <Route path="/" exact>
-            <aside className="main_right">
-              <Taskpage
-                tasks={this.state.tasks}
-                handleOpenModal={this.handleOpenModal}
-                handleCloseModal={this.handleCloseModal}
-                handleTaskSubmit={this.handleTaskSubmit}
-                showModal={this.state.showModal}
-                users={this.state.users}
-                handleSelectedUser={this.handleSelectedUser}
-                selectedUser={this.state.selectedUser}
-                handleSelectedType={this.handleSelectedType}
-                selectedType={this.state.selectedType}
-                handleSelectedPriority={this.handleSelectedPriority}
-                selectedPriority={this.selectedPriority}
-                handleSelectedStatus={this.handleSelectedStatus}
-                selectedStatus={this.selectedStatus}
-              />
-            </aside>
-          </Route>
-          <Route path="/standup">
-            <aside className="main_right">
-              <StandUp />
-            </aside>
-          </Route>
-=======
-
 
           <aside className="main_right">
-         <Avatars />
+            <Avatars />
             <Taskpage
               addTaskItemToCal={this.addTaskItemToCal}
               tasks={this.state.tasks}
@@ -327,7 +295,6 @@ export default class Home extends Component {
             />
             {/* <Modal/> */}
           </aside>
->>>>>>> master
         </main>
       );
     }

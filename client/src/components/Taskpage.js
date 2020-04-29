@@ -62,19 +62,6 @@ class Taskpage extends Component {
 
         {this.props.tasks.map((task) => {
           return (
-<<<<<<< HEAD
-            <Link to="/standup">
-              <div className="taskpage__tasks">
-                <div className="taskpage__task" key={index}>
-                  <div className="taskpage__tasktitle"> {task.title} </div>
-                  <div className="taskpage__tasktype">{task.type} </div>
-                  <div className="taskpage__taskteammember">{task.owner}</div>
-                  <div className="taskpage__taskpriority">{task.priority}</div>
-                  <div className="taskpage__taskstatus">{task.status}</div>
-                </div>
-              </div>
-            </Link>
-=======
             <div key={task.id} className="taskpage__tasks">
               <ul className="taskpage__task">
                 <button
@@ -102,7 +89,6 @@ class Taskpage extends Component {
                 <li className="taskpage__taskstatus">{task.status}</li>
               </ul>
             </div>
->>>>>>> master
           );
         })}
       </>
