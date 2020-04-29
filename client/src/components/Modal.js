@@ -25,6 +25,7 @@ export default class Modal extends Component {
                 className="modal__close"
                 onClick={this.props.handleCloseModal}
                 src={modalx}
+                alt="exit"
               />
             </div>
             <form

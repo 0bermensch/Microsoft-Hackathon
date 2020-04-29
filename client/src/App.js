@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import axios from "axios";
 
 import "./styles/main.css";
 import "./components/TaskForm";
@@ -9,7 +8,6 @@ import "./components/TaskForm";
 import Header from "./components/Header";
 import Home from "./components/Home";
 export default class App extends Component {
-
   render() {
     return (
       <Router>
@@ -17,7 +15,7 @@ export default class App extends Component {
         <Switch>
           <Route path="/">
             <Home />
-            </Route> 
+          </Route>
         </Switch>
       </Router>
       // <div>
