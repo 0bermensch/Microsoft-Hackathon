@@ -16,13 +16,18 @@ class Taskpage extends Component {
             </div>
             <div className="taskpage__main">Working Time</div>
             <div className="taskpage__secondary">
-              <NavLink to="/tasks" activeClassName="active-link1">
+              <NavLink to="/" activeClassName="active-link1" exact>
                 Tasks
               </NavLink>
             </div>
             <div className="taskpage__secondarytwo">
               <NavLink to="/workspace" activeClassName="active-link2">
                 Workspace
+              </NavLink>
+            </div>
+            <div className="taskpage__secondarythree">
+              <NavLink to="/meeting" activeClassName="active-link3">
+                Meeting
               </NavLink>
             </div>
           </div>
@@ -55,8 +60,9 @@ class Taskpage extends Component {
           </div>
         </div>
 
-        {this.props.tasks.map((task, index) => {
+        {this.props.tasks.map((task) => {
           return (
+<<<<<<< HEAD
             <Link to="/standup">
               <div className="taskpage__tasks">
                 <div className="taskpage__task" key={index}>
@@ -68,6 +74,35 @@ class Taskpage extends Component {
                 </div>
               </div>
             </Link>
+=======
+            <div key={task.id} className="taskpage__tasks">
+              <ul className="taskpage__task">
+                <button
+                  onClick={this.props.addTaskItemToCal}
+                  id={task.id}
+                  className="taskpage_button"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                      className="taskpage_button-svg"
+                      d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+                    />
+                  </svg>
+                </button>
+                <li className="taskpage__tasktitle"> {task.title} </li>
+                <li className="taskpage__tasktype">{task.type} </li>
+                <li className="taskpage__taskteammember">{task.owner}</li>
+                <li className="taskpage__taskpriority">{task.priority}</li>
+                <li className="taskpage__taskstatus">{task.status}</li>
+              </ul>
+            </div>
+>>>>>>> master
           );
         })}
       </>
@@ -75,14 +110,4 @@ class Taskpage extends Component {
   }
 }
 
-//     );
-//   }
-// }
-
 export default Taskpage;
-// const Taskpage = () => {
-//   console.log(this.props);
-//   return (
-// };
-
-// export default Taskpage;

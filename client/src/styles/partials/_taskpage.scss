@@ -1,8 +1,11 @@
+li {
+  list-style-type: none;
+}
+
 .taskpage__all {
   display: flex;
   flex-direction: column;
   width: 80vw;
-  
 }
 
 a {
@@ -17,21 +20,24 @@ a {
 }
 
 .taskpage__icon {
-margin-top: .2%;
-padding-top: 50%;
-padding-bottom: 50%;
-padding-left: 22px;
-padding-right: 12px;
+  margin-top: 0.2%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  padding-left: 22px;
+  padding-right: 12px;
 }
 .taskpage__new {
   height: 39px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   width: 75vw;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .taskpage__headers {
   display: flex;
   height: 60px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   align-items: center;
 }
 .taskpage__main {
@@ -65,18 +71,18 @@ padding-right: 12px;
   letter-spacing: normal;
   color: #484644;
 }
-.active-link1{
+.active-link1 {
   text-decoration: none;
   color: black;
   padding-bottom: 35px;
-  border-bottom: 1px solid #464773
+  border-bottom: 1px solid #464773;
 }
 
 .active-link2 {
   text-decoration: none;
   color: black;
   padding-bottom: 17px;
-  border-bottom: 1px solid #464773
+  border-bottom: 1px solid #464773;
   // border-bottom: 1px solid #464773
 }
 .taskpage__secondary2 {
@@ -98,7 +104,7 @@ padding-right: 12px;
   width: 75vw;
   margin-left: 0px;
   // flex-basis: 100%;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   padding-left: 91px;
   min-height: 43px;
   padding-top: 10px;
@@ -119,7 +125,7 @@ padding-right: 12px;
   width: 75vw;
   height: 43px;
   padding-left: 91px;
-  border: 1px solid #EDEBE9;
+  border: 1px solid #edebe9;
   min-height: 43px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -131,7 +137,6 @@ padding-right: 12px;
   line-height: normal;
   letter-spacing: normal;
   color: #484644;
-  
 }
 
 .taskpage__task {
@@ -140,7 +145,6 @@ padding-right: 12px;
 }
 .taskpage__titles--title {
   flex-basis: 15%;
-
 }
 .taskpage__titles--type {
   flex-basis: 20%;
@@ -190,4 +194,19 @@ padding-right: 12px;
 .taskpage__taskstatus {
   flex-basis: 10%;
   width: 20%;
+}
+
+.taskpage_button {
+  position: absolute;
+  left: 395px;
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $calendar-time;
+    border-radius: 50%;
+  }
+  &-svg {
+    fill: $sched;
+  }
 }
