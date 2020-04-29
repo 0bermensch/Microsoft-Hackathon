@@ -20,12 +20,12 @@ class Taskpage extends Component {
                 Tasks
               </NavLink>
             </div>
-            <div className="taskpage__secondarytwo">
+            <div className="taskpage__secondary2">
               <NavLink to="/workspace" activeClassName="active-link2">
                 Workspace
               </NavLink>
             </div>
-            <div className="taskpage__secondarythree">
+            <div className="taskpage__secondary3">
               <NavLink to="/meeting" activeClassName="active-link3">
                 Meeting
               </NavLink>
