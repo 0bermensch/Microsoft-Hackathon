@@ -6,6 +6,8 @@ import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
 import Calendar from "./Calendar";
 
+import Avatars from "./Avatars";
+
 export default class Home extends Component {
   state = {
     tasks: [], //stores all the tasks from db
@@ -272,7 +274,9 @@ export default class Home extends Component {
             </div>
           </aside>
 
+
           <aside className="main_right">
+         <Avatars />
             <Taskpage
               addTaskItemToCal={this.addTaskItemToCal}
               tasks={this.state.tasks}
