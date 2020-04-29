@@ -1,12 +1,12 @@
 import React from "react";
 import Draggable from "react-draggable";
-import Avatar1 from "./assets/Avatar (Chuck).png";
-import Avatar2 from "./assets/Avatar (Slogan).png";
-import Avatar3 from "./assets/Avatar (Janine).png";
-import Avatar4 from "./assets/Group 18.png";
-import Avatar5 from "./assets/Group 19.png";
-import Avatar6 from "./assets/Group 20.png";
-import Floorplan from "./assets/Office Picture.svg";
+import Avatar1 from "../assets/images/Avatar (Chuck).png";
+import Avatar2 from "../assets/images/Avatar (Janine).png";
+import Avatar3 from "../assets/images/Avatar (Slogan).png";
+import Avatar4 from "../assets/images/Group 18.png";
+import Avatar5 from "../assets/images/Group 19.png";
+import Avatar6 from "../assets/images/Group 20.png";
+import Floorplan from "../assets/images/Office Picture.svg";
 
 function App() {
   return (
