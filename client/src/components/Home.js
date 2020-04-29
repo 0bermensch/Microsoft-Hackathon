@@ -9,74 +9,26 @@ export default class Home extends Component {
   };
   componentDidMount() {
     const today = new Date();
-    let month = today.getMonth();
+    let monthIdx = today.getMonth();
+    let month_arr = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    let month = month_arr[monthIdx];
     const num = today.getDate();
-    let day = today.getDay();
-    switch (day) {
-      case 0:
-        day = "Sun";
-        break;
-      case 1:
-        day = "Mon";
-        break;
-      case 2:
-        day = "Tue";
-        break;
-      case 3:
-        day = "Wed";
-        break;
-      case 4:
-        day = "Thu";
-        break;
-      case 5:
-        day = "Fri";
-        break;
-      case 6:
-        day = "Sat";
-        break;
-      case 7:
-        day = "Sun";
-        break;
-    }
-    switch (month) {
-      case 0:
-        month = "Jan";
-        break;
-      case 1:
-        month = "Feb";
-        break;
-      case 2:
-        month = "Mar";
-        break;
-      case 3:
-        month = "Apr";
-        break;
-      case 4:
-        month = "May";
-        break;
-      case 5:
-        month = "Jun";
-        break;
-      case 6:
-        month = "Jul";
-        break;
-      case 7:
-        month = "Aug";
-        break;
-      case 8:
-        month = "Sep";
-        break;
-      case 9:
-        month = "Oct";
-        break;
-      case 10:
-        month = "Nov";
-        break;
-      case 11:
-        month = "Dec";
-        break;
-    }
-
+    let dayIdx = today.getDay();
+    let day_arr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let day = day_arr[dayIdx];
     this.setState({
       date: `${month} ${num}`,
       day: day,
@@ -102,24 +54,20 @@ export default class Home extends Component {
                   <h3 className="right_cal-date">{this.state.date}</h3>
                   <h5 className="right_cal-day">{this.state.day}</h5>
                 </div>
-                <div className="right_cal-purple morning">
-                  <h3 className="right_cal-purple-innertext">
-                    Morning Standup
-                  </h3>
+                <div className="right_purple morning">
+                  <h3 className="right_purple-innertext">Morning Standup</h3>
                 </div>
-                <div className="right_cal-blue morning">
-                  <h3 className="right_cal-blue-innertext">Working Time</h3>
+                <div className="right_blue morning">
+                  <h3 className="right_blue-innertext">Working Time</h3>
                 </div>
-                <div className="right_cal-purple afternoon">
-                  <h3 className="right_cal-purple-innertext">Noon Standup</h3>
+                <div className="right_purple afternoon">
+                  <h3 className="right_purple-innertext">Noon Standup</h3>
                 </div>
-                <div className="right_cal-blue afternoon">
-                  <h3 className="right_cal-blue-innertext">Working Time</h3>
+                <div className="right_blue afternoon">
+                  <h3 className="right_blue-innertext">Working Time</h3>
                 </div>
-                <div className="right_cal-purple end">
-                  <h3 className="right_cal-purple-innertext">
-                    End of Day Standup
-                  </h3>
+                <div className="right_purple end">
+                  <h3 className="right_purple-innertext">End of Day Standup</h3>
                 </div>
               </div>
             </div>

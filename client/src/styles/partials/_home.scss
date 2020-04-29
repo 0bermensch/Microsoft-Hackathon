@@ -71,70 +71,77 @@
             letter-spacing: normal;
             color: $calendar-time;
           }
-          &-purple {
-            width: 230px;
-            height: 30px;
-            border-radius: 2px;
-            background-color: $calendar-standup;
-            display: flex;
-            align-items: center;
-            &.morning {
-              position: absolute;
-              top: 78px;
-            }
-            &.afternoon {
-              position: absolute;
-              top: 318px;
-            }
-            &.end {
-              position: absolute;
-              top: 648px;
-            }
-            &-innertext {
-              margin-left: 10px;
-              height: 16px;
-              font-family: Segoeui;
-              font-size: 12px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              color: $calendar-standup-text;
-            }
+        }
+        &_purple {
+          width: 230px;
+          height: 30px;
+          border-radius: 2px;
+          background-color: $calendar-standup;
+          display: flex;
+          align-items: center;
+          &.morning {
+            position: absolute;
+            top: 78px;
           }
-          &-blue {
-            width: 230px;
-            height: 210px;
-            border-radius: 2px;
-            background-color: $calendar-worktime;
-            &.morning {
-              position: absolute;
-              top: 108px;
-            }
-            &.afternoon {
-              position: absolute;
-              top: 438px;
-            }
-            &-innertext {
-              margin: 6px 10px;
-              height: 16px;
-              font-family: Segoeui;
-              font-size: 12px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              color: $calendar-worktime-text;
-            }
+          &.afternoon {
+            position: absolute;
+            top: 318px;
+          }
+          &.end {
+            position: absolute;
+            top: 648px;
+          }
+          &-innertext {
+            margin-left: 10px;
+            height: 16px;
+            font-family: Segoeui;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $calendar-standup-text;
+            // &:hover {
+            //   cursor: pointer;
+            //   text-decoration: underline;
+            // }
+          }
+        }
+        &_blue {
+          width: 230px;
+          height: 210px;
+          border-radius: 2px;
+          background-color: $calendar-worktime;
+          &.morning {
+            position: absolute;
+            top: 108px;
+          }
+          &.afternoon {
+            position: absolute;
+            top: 438px;
+          }
+          &-innertext {
+            margin: 6px 10px;
+            height: 16px;
+            font-family: Segoeui;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $calendar-worktime-text;
+            // &:hover {
+            //   cursor: pointer;
+            //   text-decoration: underline;
+            // }
           }
         }
       }
     }
   }
   &_right {
-    background-color: blue;
     width: 80vw;
   }
 }
