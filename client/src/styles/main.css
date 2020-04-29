@@ -292,8 +292,6 @@
 }
 
 .main_middle-container .right_purple {
-  width: 230px;
-  height: 30px;
   border-radius: 2px;
   background-color: #ddd3ea;
   display: -webkit-box;
@@ -333,8 +331,6 @@
 }
 
 .main_middle-container .right_blue {
-  width: 230px;
-  height: 210px;
   border-radius: 2px;
   background-color: #c2dff4;
 }
@@ -734,6 +730,56 @@ a {
   font-family: SegoeBold;
   text-align: center;
   padding-top: 40px;
+}
+
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-family: segoeui;
+  color: gray;
+  font-size: 13px;
+  width: 100%;
+}
+
+.calendar__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.calendar__item {
+  width: 100%;
+  height: 60px;
+}
+
+.right_red {
+  color: red;
+}
+
+.right_yellow {
+  width: 230px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 *,

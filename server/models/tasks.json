@@ -1,13 +1,57 @@
 [
   {
-    "id": "1af0jruup5gu",
-    "title": "Make sprites for world 3, boss 1",
-    "type": "Art Assets",
-    "owner": "Chuck",
-    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81kqrwS1nNL.jpg",
-    "priority": "Medium",
-    "date": "12/12/2012",
-    "timestamp": "date now",
-    "status": "In Progress"
+    "id": "911a8b10-257b-41f3-9750-be80164360ac",
+    "title": "Morning Standup",
+    "type": "reoccuring",
+    "priority": "",
+    "timestamp": "2020-04-29T12:26:44.619Z",
+    "status": "",
+    "owner": "",
+    "timer": "1:00",
+    "starttime": "9:00"
+  },
+  {
+    "id": "911a8b10-257b-41f3-9750-be80164360ac",
+    "title": "Noon Standup",
+    "type": "reoccuring",
+    "priority": "",
+    "timestamp": "2020-04-29T12:26:44.619Z",
+    "status": "",
+    "owner": "",
+    "timer": "1:00",
+    "starttime": "12:00"
+  },
+  {
+    "id": "911a8b10-257b-41f3-9750-be80164360ac",
+    "title": "End of Day Standup",
+    "type": "reoccuring",
+    "priority": "",
+    "timestamp": "2020-04-29T12:26:44.619Z",
+    "status": "",
+    "owner": "",
+    "timer": "0:30",
+    "starttime": "5:00"
+  },
+  {
+    "id": "911a8b10-257b-41f3-9750-be80164360ac",
+    "title": "Working Time",
+    "type": "reoccuring",
+    "priority": "",
+    "timestamp": "2020-04-29T12:26:44.619Z",
+    "status": "",
+    "owner": "",
+    "timer": "0:30",
+    "starttime": "2:00"
+  },
+  {
+    "id": "10ac47b9-de33-410f-ab36-9b18390354c9",
+    "title": "Test",
+    "type": "",
+    "priority": "",
+    "timestamp": "2020-04-29T14:47:55.983Z",
+    "status": "",
+    "owner": "Connor Steele",
+    "timer": "1:20",
+    "starttime": "3:00"
   }
 ]
