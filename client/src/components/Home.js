@@ -2,20 +2,23 @@ import React, { Component } from "react";
 import axios from "axios";
 import Taskpage from "./Taskpage";
 import { Route } from "react-router-dom";
-
+import moment from "moment";
 import nav from "../assets/images/left-navbar.png";
-
+import Calendar from "./Calendar";
 export default class Home extends Component {
   state = {
-    tasks: [],
-    users: [],
-    selectedUser: "",
+    tasks: [], //stores all the tasks from db
+    users: [], //stores all the users from db
+    timer: [],
+    countDown: "", //used to store the countdown user
+    selectedUser: "", //used to hold the user, because react is shit at dealing with dropdown/options
     date: "",
     day: "",
     showModal: false,
     selectedType: "",
     selectedPriority: "",
     selectedStatus: "",
+    schedule: {},
 
     //used specifically for date picker, can be deleted if we switch date picker
     selectedDay: undefined,
@@ -39,7 +42,67 @@ export default class Home extends Component {
 
   getTasks = () => {
     axios.get("http://localhost:5000/tasks").then((res) => {
+      const tempTimeArr = [];
+
+      let schedule = {
+        "8": "",
+        "9": "",
+        "10": "",
+        "11": "",
+        "12": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+      };
+
+      //use this to match up with the indexes on the left
+      let timeArr = [
+        "8a",
+        "9a",
+        "10a",
+        "11a",
+        "12p",
+        "1p",
+        "2p",
+        "3p",
+        "4p",
+        "5p",
+        "6p",
+      ];
+      //setup the calendar time start + countdown ratio
+      res.data.map((task) => {
+        tempTimeArr.push({
+          title: task.title,
+          priority: task.priority,
+          starttime: task.starttime,
+          timer: task.timer,
+        });
+
+        //setup the schedule by assigning each itme to a spot based on time
+        ///only one item can be assigned to one time slot currently
+        timeArr.map((hour, i) => {
+          res.data.map((item) => {
+            if (i > 0) {
+              //loop through the time arr, remove all non-number characters
+              //split it out at the : to handle grabbing just the FIRST PART of the number
+              if (
+                hour.replace(/\D/g, "") ===
+                moment(item.starttime)["_i"].split(":")[0]
+              ) {
+                //if the time and the hour slot align, add it to the schedule object
+                schedule[moment(item.starttime)["_i"].split(":")[0]] =
+                  item.title;
+              }
+            }
+          });
+        });
+      });
       this.setState({ tasks: res.data });
+      this.setState({ schedule: schedule });
+      this.setState({ time: tempTimeArr });
     });
   };
 
@@ -164,7 +227,11 @@ export default class Home extends Component {
                   <h3 className="right_cal-date">{this.state.date}</h3>
                   <h5 className="right_cal-day">{this.state.day}</h5>
                 </div>
-                <div className="right_purple morning">
+                <Calendar
+                  time={this.state.time}
+                  schedule={this.state.schedule}
+                />
+                {/* <div className="right_purple morning">
                   <h3 className="right_purple-innertext">Morning Standup</h3>
                 </div>
                 <div className="right_blue morning">
@@ -178,7 +245,7 @@ export default class Home extends Component {
                 </div>
                 <div className="right_purple end">
                   <h3 className="right_purple-innertext">End of Day Standup</h3>
-                </div>
+                </div> */}
               </div>
             </div>
           </aside>
