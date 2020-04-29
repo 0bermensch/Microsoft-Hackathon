@@ -101,6 +101,7 @@ export default class Home extends Component {
         //     }
         //   });
         // });
+
       });
       this.setState({ tasks: res.data });
       this.setState({ schedule: schedule });
