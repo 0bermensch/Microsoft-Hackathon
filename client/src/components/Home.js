@@ -275,11 +275,7 @@ export default class Home extends Component {
           </aside>
 
           <aside className="main_right">
-<<<<<<< HEAD
-            <Avatars />
-=======
             {/* <Avatars /> */}
->>>>>>> master
             <Taskpage
               addTaskItemToCal={this.addTaskItemToCal}
               tasks={this.state.tasks}

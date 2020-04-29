@@ -25,7 +25,14 @@
   &__video {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+
+    justify-content: center;
+  }
+
+  &__screen-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1052px;
   }
 
   &__video1 {
@@ -33,11 +40,32 @@
     width: 50%;
   }
 
-  &__video2 {
+  &__video2,
+  &__video3,
+  &__video4 {
     height: 290px;
     width: 50%;
     background-color: #302f2f;
-    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__video4 {
+    background-color: #383838;
+  }
+
+  &__av {
+    width: 74px;
+    height: 74px;
+  }
+
+  &__person {
+    color: white;
+    font-family: "SegoeUI";
+    font-size: 12px;
+    display: flex;
   }
 }
 
@@ -47,6 +75,7 @@
   height: 128px;
   background-color: #f3f2f1;
   padding-left: 43px;
+  width: 100%;
   &__img {
     width: 74px;
     height: 99px;

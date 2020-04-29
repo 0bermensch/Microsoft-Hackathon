@@ -870,7 +870,18 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.standup__screen-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1052px;
 }
 
 .standup__video1 {
@@ -878,11 +889,41 @@ a {
   width: 50%;
 }
 
-.standup__video2 {
+.standup__video2, .standup__video3, .standup__video4 {
   height: 290px;
   width: 50%;
   background-color: #302f2f;
-  border: 3px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.standup__video4 {
+  background-color: #383838;
+}
+
+.standup__av {
+  width: 74px;
+  height: 74px;
+}
+
+.standup__person {
+  color: white;
+  font-family: "SegoeUI";
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .avatars {
@@ -895,6 +936,7 @@ a {
   height: 128px;
   background-color: #f3f2f1;
   padding-left: 43px;
+  width: 100%;
 }
 
 .avatars__img {

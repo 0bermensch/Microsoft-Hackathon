@@ -7,6 +7,9 @@ import Avatar3 from "../assets/images/Avatar (Slogan).png";
 import Avatar4 from "../assets/images/Group 18.png";
 import Avatar5 from "../assets/images/Group 19.png";
 import Avatar6 from "../assets/images/Group 20.png";
+import Av2 from "../assets/icons/Av2.png";
+import Av3 from "../assets/icons/Av3.png";
+import Av4 from "../assets/icons/Av4.png";
 
 export default class StandUp extends Component {
   render() {
@@ -17,10 +20,22 @@ export default class StandUp extends Component {
           <h2 className="standup__name">Noon Standup</h2>
         </div>
         <div className="standup__video">
-          <img src={Ted} className="standup__video1" alt="person" />
-          <div className="standup__video2"></div>
-          <div className="standup__video2"></div>
-          <div className="standup__video2"></div>
+          <div className="standup__screen-container">
+            <img src={Ted} className="standup__video1" alt="person" />
+
+            <div className="standup__video2">
+              <img className="standup__av" src={Av2} />
+              <p className="standup__person">Janine Q.</p>
+            </div>
+            <div className="standup__video3">
+              <img className="standup__av" src={Av3} />
+              <p className="standup__person">Susan C.</p>
+            </div>
+            <div className="standup__video4">
+              <img className="standup__av" src={Av4} />
+              <p className="standup__person">Sloan J.</p>
+            </div>
+          </div>
         </div>
         <div className="avatar__bar">
           <div className="avatars">
