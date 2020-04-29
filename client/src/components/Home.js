@@ -103,7 +103,6 @@ export default class Home extends Component {
         //     }
         //   });
         // });
-
       });
       this.setState({ tasks: res.data });
       this.setState({ schedule: schedule });
@@ -274,9 +273,8 @@ export default class Home extends Component {
             </div>
           </aside>
 
-
           <aside className="main_right">
-         <Avatars />
+            {/* <Avatars /> */}
             <Taskpage
               addTaskItemToCal={this.addTaskItemToCal}
               tasks={this.state.tasks}

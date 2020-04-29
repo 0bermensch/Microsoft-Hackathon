@@ -7,6 +7,7 @@ import "./components/TaskForm";
 // import TaskForm from "./components/TaskForm";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Avatars from "./components/Avatars";
 export default class App extends Component {
   render() {
     return (
@@ -14,7 +15,7 @@ export default class App extends Component {
         <Header />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/workspace" />
+          <Route path="/workspace" component={Avatars} />
           <Route path="/meeting" />
         </Switch>
       </Router>

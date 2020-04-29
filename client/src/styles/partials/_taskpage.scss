@@ -85,7 +85,8 @@ a {
   border-bottom: 1px solid #464773;
   // border-bottom: 1px solid #464773
 }
-.taskpage__secondary2 {
+.taskpage__secondary2,
+.taskpage__secondary3 {
   width: 69px;
   height: 19px;
   font-family: SegoeUI;
@@ -96,6 +97,7 @@ a {
   line-height: normal;
   letter-spacing: normal;
   color: #484644;
+  margin-right: 15px;
 }
 
 .taskpage__titles {
