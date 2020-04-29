@@ -29,13 +29,21 @@ class Taskpage extends Component {
           <div className="taskpage__new">
             <Modal
               tasks={this.props.tasks}
-              handleOpenModal={this.props.handleOpenModal}
-              handleCloseModal={this.props.handleCloseModal}
-              handleTaskSubmit={this.props.handleTaskSubmit}
+              handleSelectedUser={this.props.handleSelectedUser}
+              selectedUser={this.props.selectedUser}
+              handleSelectedType={this.props.handleSelectedType}
+              selectedType={this.props.selectedType}
+              handleSelectedPriority={this.props.handleSelectedPriority}
+              selectedPriority={this.props.selectedPriority}
+              handleSelectedStatus={this.props.handleSelectedStatus}
+              selectedStatus={this.props.selectedStatus}
               showModal={this.props.showModal}
               users={this.props.users}
               handleSelectedUser={this.props.handleSelectedUser}
               selectedUser={this.props.selectedUser}
+              handleOpenModal={this.props.handleOpenModal}
+              handleCloseModal={this.props.handleCloseModal}
+              handleTaskSubmit={this.props.handleTaskSubmit}
             />
           </div>
           <div className="taskpage__titles">
