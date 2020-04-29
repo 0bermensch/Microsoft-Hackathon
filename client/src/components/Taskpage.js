@@ -1,6 +1,6 @@
 // import React from "react";
 
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Modal from "./Modal";
 import Icon from "../assets/icons/br.png";
 import { NavLink } from 'react-router-dom'
@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom'
 class Taskpage extends Component {
   render() {
     return (
+
 <>
   <div className="taskpage__all">
     <div className="taskpage__headers">
@@ -35,23 +36,24 @@ class Taskpage extends Component {
     </div>
   </div>
 
-  {this.props.tasks.map((task, index) => {
-    return (
-        <div className="taskpage__tasks">
-      <div className="taskpage__task" key={index}>
-       <div className="taskpage__tasktitle"> {task.title} </div>
-        <div className="taskpage__tasktype">{task.type} </div>
-        <div className="taskpage__taskteammember">{task.owner}</div>
-        <div className="taskpage__taskpriority">{task.priority}</div>
-        <div className="taskpage__taskstatus">{task.status}</div>
-      </div>
-      </div>
+        {this.props.tasks.map((task, index) => {
+          return (
+            <div className="taskpage__tasks">
+              <div className="taskpage__task" key={index}>
+                <div className="taskpage__tasktitle"> {task.title} </div>
+                <div className="taskpage__tasktype">{task.type} </div>
+                <div className="taskpage__taskteammember">{task.owner}</div>
+                <div className="taskpage__taskpriority">{task.priority}</div>
+                <div className="taskpage__taskstatus">{task.status}</div>
+              </div>
+            </div>
+          );
+        })}
+      </>
     );
-  })}
-</>
-);
-  }}
-        
+  }
+}
+
 //     );
 //   }
 // }

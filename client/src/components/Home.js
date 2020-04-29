@@ -18,6 +18,9 @@ export default class Home extends Component {
     date: "",
     day: "",
     showModal: false,
+    selectedType: "",
+    selectedPriority: "",
+    selectedStatus: "",
 
     //used specifically for date picker, can be deleted if we switch date picker
     selectedDay: undefined,
@@ -59,7 +62,24 @@ export default class Home extends Component {
     this.setState({
       selectedUser: e.nativeEvent.target.value,
     });
-    console.log(e.nativeEvent.target.value, this.state);
+  };
+
+  handleSelectedType = (e) => {
+    this.setState({
+      selectedType: e.nativeEvent.target.value,
+    });
+  };
+
+  handleSelectedPriority = (e) => {
+    this.setState({
+      selectedPriority: e.nativeEvent.target.value,
+    });
+  };
+
+  handleSelectedStatus = (e) => {
+    this.setState({
+      selectedStatus: e.nativeEvent.target.value,
+    });
   };
 
   //handles sumbitting the task
@@ -68,10 +88,14 @@ export default class Home extends Component {
     axios
       .post("http://localhost:5000/tasks", {
         title: event.target.title.value,
-        type: event.target.type.value,
-        // owner: event.target.owner.value,
-        // date: this.state.selectedDay,
-        // timestamp: new Date(),
+        type: this.state.selectedType,
+        owner: this.state.selectedUser,
+        priority: this.state.selectedPriority,
+        date: this.state.selectedDay,
+        timestamp: new Date(),
+        status: this.state.selectedStatus,
+        timer: event.target.timer.value,
+        starttime: event.target.starttime.value,
       })
       .then((res) => {
         this.setState({
@@ -83,6 +107,7 @@ export default class Home extends Component {
       });
 
     event.target.reset();
+    this.handleCloseModal();
   };
 
   //setup the day in the state
@@ -125,7 +150,6 @@ export default class Home extends Component {
     });
   }
   render() {
-    console.log(this.props);
     if (!this.state) {
       return <h2>loading...</h2>;
     } else {
@@ -165,15 +189,23 @@ export default class Home extends Component {
           </aside>
           <Route path="/">
           <aside className="main_right">
-          <Taskpage tasks={this.state.tasks} 
-          handleOpenModal={this.handleOpenModal}
-          handleCloseModal={this.handleCloseModal}
-          handleTaskSubmit={this.handleTaskSubmit}
-          showModal={this.state.showModal}
-          users={this.state.users}
-          handleSelectedUser={this.handleSelectedUser}
-          selectedUser={this.state.selectedUser}/>
-          {/* <Modal/> */}
+            <Taskpage
+              tasks={this.state.tasks}
+              handleOpenModal={this.handleOpenModal}
+              handleCloseModal={this.handleCloseModal}
+              handleTaskSubmit={this.handleTaskSubmit}
+              showModal={this.state.showModal}
+              users={this.state.users}
+              handleSelectedUser={this.handleSelectedUser}
+              selectedUser={this.state.selectedUser}
+              handleSelectedType={this.handleSelectedType}
+              selectedType={this.state.selectedType}
+              handleSelectedPriority={this.props.handleSelectedPriority}
+              selectedPriority={this.props.selectedPriority}
+              handleSelectedStatus={this.props.handleSelectedStatus}
+              selectedStatus={this.props.selectedStatus}
+            />
+            {/* <Modal/> */}
           </aside>
           </Route>
         </main>
